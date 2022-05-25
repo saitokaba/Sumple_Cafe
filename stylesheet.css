@@ -1,0 +1,307 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+::before , ::after {
+	box-sizing: inherit;
+}
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+	vertical-align: middle;
+	text-align: inherit;
+	font: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+body {
+margin:0;
+font-family: 'メイリオ', 'Meiryo', 'Baskerville',sans-serif;
+list-style: none;
+z-index:0;
+}
+
+li {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    margin:0 auto;
+    background-color: rgba(64, 34, 15, 0.9);
+    position:fixed;
+    z-index: 10;
+}
+
+.header-inner {
+    max-width: 1300px;
+    margin:0 auto;
+    width:100%;
+    align-items:center;
+ }
+ 
+.logo{
+   position: fixed;
+}
+.top-menu{
+    padding-top:45px;
+    margin-right: 80px;
+    display: flex; 
+    justify-content: center;
+    color: #efefef;
+}
+
+.menu-item{
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    padding:0 20px;
+}
+.menu-item:hover{
+    background-color: rgba(244, 229, 191, 0.4);
+    border-radius: 20%;
+}
+.top-box {
+    position   : relative;
+    width      : 100%;
+    height     : 100vh;
+    margin     : auto;
+    overflow   : hidden;
+  }
+  
+  /* --- 背景の指定 ------------------------------------------- */
+  .top-box .bgimg {
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    bottom     : 0;
+    right      : 0;
+    opacity    : 0;
+    animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
+  }
+    
+    .top-box .bg1 {
+    background-image : url(top-image/cafe-image.jpg);   /* 背景の画像を指定 */
+    background-size: cover;
+    background-position:center;
+}
+    .top-box .bg2 {
+    background-image : url(top-image/latte-image.jpg);   /* 背景の画像を指定 */
+    background-size: cover;
+    background-position:center;
+    animation-delay  : 5s;
+}
+    .top-box .bg3 {
+    background-image : url(top-image/inside-imege.jpg);   /* 背景の画像を指定 */
+    background-size: cover;
+    background-position:center;
+    animation-delay  : 10s;
+}
+    .top-box .bg4 {
+    background-image : url(top-image/branch-image.jpg);   /* 背景の画像を指定 */
+    background-size: cover;
+    background-position:center;
+    animation-delay  : 15s;
+}
+  
+  @keyframes bgAnime {
+     0% { opacity: 0; }
+     5% { opacity: 1; }
+     25% { opacity: 1; }
+     30% { opacity: 0; }
+    100% { opacity: 0; }
+   }
+
+   .top-box h1{
+    position   : absolute;
+    display    : inline-block;
+    padding    : 10px;
+    font-size  :14px;
+    letter-spacing: 3px;
+
+    font-weight: lighter;
+    color:#fff;
+    top        : 50%;                               /* 中央寄せ */
+    left       : 50%;
+    transform  : translate(-50%,-50%);
+    z-index    : 2;
+  }
+
+.news-area{
+    height:50px;
+    color:#ffffff;
+    background-color: rgba(64, 34, 15, 0.8);
+}
+.news-area p{
+    padding-left: 30px;
+    line-height:50px;
+
+}
+main {
+    height:100%;
+    width:100%;
+    background-color: rgba(144, 129, 96, 0.5);
+}
+#concept-area{
+    padding-top:30px;
+}
+.concept-wrap{
+    max-width:1100;
+    margin:auto;
+    text-align:center;
+    padding:100px 0 ;
+}
+
+.concept-box{
+    position: relative;
+    top:100px;
+    background-image: url(concept/concept1.jpg) ;
+    background-size :content;
+    background-position:left;
+    margin:auto;
+    width: 640px;
+    height:460px;
+}
+.concept-box p{
+        position   : absolute;
+        font-size  : 16px;
+        font-weight: bold;
+        color      : #1e1604;
+        top        : 22%;                               
+        left       : 50%;
+        right      : -30%;
+        transform  : translate(-40%,10%);
+        line-height: 34px;
+        z-index    : 11;
+      }
+    
+    .mark{
+        padding-top: 200px;
+         width:15%;
+    }
+    .sapce-phot1,.sapce-phot2{
+        padding: 0;
+        margin-bottom:10px;
+        width:350px;
+        height: 350px;
+    }
+    .space-box{
+        padding-top:80px;
+    }
+    .space-gallery,.space-work{
+        padding: 0;
+        margin-bottom:10px;
+        width:240px;
+        height:350px;
+    }
+     
+    .access-wrap{
+        max-width:1100;
+        margin:auto;
+        text-align:center;
+        padding:80px 0;
+        font-size:12px;
+        color:#40220F;
+    }
+    .shop-name{
+        padding:30px 0;
+        font-size: 18px;
+        font-family: "Jokerman";
+    }
+    .googlemap-gray {
+        padding-top:80px;
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+
+    footer{
+        height: 80px;
+        width: 100%;
+        background-color:#45330a;
+        color:#fff;
+        line-height:80px;
+        text-align:center;
+    }
+    .footer-list{
+            display: flex; 
+            justify-content: center;
+            color: #853939;
+      }
+    .sns-menu{
+        padding:20px;
+        display: flex; 
+        justify-content: center;
+        color: #efefef;
+    }
+    .sns-item{
+        font-size:16px;
+        padding:10px;
+    }
+    .sns-item:hover{
+        color: rgba(100, 91, 70, 0.4);
+    }
+
+    /* Menu */
+    .drinkmenu-area{
+        background-color: rgb(25,27,39);  
+    }
+    .drink-wrap {
+        max-width: 1300px;
+        padding-top:100px;
+        padding-bottom: 80px;
+
+    }
+    .drink-text,.branch-text,.sweets-text{
+        position: relative;
+        top:80px;
+        left:100px;     
+        color:#ffffff;
+        font-size: 18px;
+    }
+    .menu-box{
+        position: relative;
+        display: flex;
+        left:25%;
+        flex-wrap: wrap;
+    }
+
+    .menu-img p{
+        color:#ffffff;
+        padding:20px
+    
+    }
+    .menu-1,.menu-2,.menu-3,.menu-4,.menu-5,.menu-6,.menu-7,.menu-8,.menu-9{
+        width :250px;
+        height:250px;
+        margin-right: 30px;
+        flex:auto;      
+    }
+    .coment{
+        color:#ffffff;
+        font-size:12px;
+        padding-bottom: 30px;
+        text-align: center;  
+    }
+    .branch-wrap {
+        max-width: 1300px;
+        width:100%;
+        padding-top:50px;
+        padding-bottom: 80px;
+    }
+    .sweets-wrap{
+        max-width: 1300px;
+        padding-bottom: 80px;
+    }
