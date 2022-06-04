@@ -1,469 +1,140 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-::before , ::after {
-	box-sizing: inherit;
-}
-button {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	border-radius: 0;
-	background: transparent;
-	color: inherit;
-	vertical-align: middle;
-	text-align: inherit;
-	font: inherit;
-	-webkit-appearance: none;
-	appearance: none;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sumple Cafeの公式サイト,メニュー，アクセス情報など">
+    <title>Sample Cafe こだわりのおいしいコーヒとFree_wi-fi完備のワークスペース・ギャラリー空間</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <!--ICON-->
+    <link rel="shortcut icon" href="logo/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="logo/apple-touch-icon-180x180-precomposed.png">
+    <!-- jqueryの呼び出し -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-body {
-margin:0;
-font-family: 'メイリオ', 'Meiryo', 'Baskerville',sans-serif;
-list-style: none;
-z-index:0;
-}
+    <!-- メニューの部分にjqueryを使用 -->
+    <script>
+        $(function () {
+            // .menu-btnのクラス属性を持っている要素をクリックしたとき
+            $('.menu-btn').on("click", function () {
+                // クリックした要素に対してクラス属性にopenが付いていなければ追加し、付いていた場合は削除する
+                $(this).toggleClass('open');
+                // // ID属性にgnavを持っている要素のクラス属性にopenが付いていなければ追加し、付いていた場合は削除する
+                $('#top-menu').toggleClass('open');
 
-li {
-    list-style-type: none;
-}
-a{
-    text-decoration: none;
-}
-h2 span{
-    color:40220F;
-    font-size:30px;
-    border-bottom: solid 4px ;
-}
-header {
-    height: 70px;
-    width: 100%;
-    margin:0 auto;
-    background-color: rgba(64, 34, 15, 0.9);
-    position:fixed;
-    z-index: 10;
-}
+            });
 
-.header-inner{
-    max-width: 1300px;
-    margin:0 auto;
-    width:100%;
- }
- 
-.logo{
-   position:fixed;
-   left:5%;
-}
-#top-menu{
-    padding-top:40px;
-    display: flex; 
-    justify-content: center;
-    color: #efefef;
-}
+        });
+        // メニューをクリックされたら、非表示にする
+        $(function () {
+            $('#top-menu >li>a').on("click", function () {
+                $('.menu-btn').toggleClass('open');
+                $('#top-menu').toggleClass('open');
+            });
+        });
+    </script>
+    <!-- ここまでjquery -->
 
-.menu-item a{
-    font-size: 16px;
-    text-decoration: none;
-    color: #ffffff;
-    padding:0 20px;
-}
-.menu-item:hover{
-    background-color: rgba(244, 229, 191, 0.4);
-    border-radius: 20%;
-}
-.top-box {
-    position   : relative;
-    width      : 100%;
-    height     : 100vh;
-    margin     : auto;
-    overflow   : hidden;
-  }
+</head>
 
-  .hamburger {
-    display: none;
-  }
-  
-  /* --- 背景の指定 ------------------------------------------- */
-  .top-box .bgimg {
-    position   : absolute;
-    top        : 0;
-    left       : 0;
-    bottom     : 0;
-    right      : 0;
-    opacity    : 0;
-    animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
-  }
+<body id="top">
+    <header>
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="#"><img src="logo/icon-72x72.png" alt="SumpleCafeシンボルロゴ"></a>
+                </div>
+
+                <div class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
     
-    .top-box .bg1 {
-    background-image : url(top-image/cafe-image.jpg);   /* 背景の画像を指定 */
-    background-size: cover;
-    background-position:center;
-}
-    .top-box .bg2 {
-    background-image : url(top-image/latte-image.jpg);   /* 背景の画像を指定 */
-    background-size: cover;
-    background-position:center;
-    animation-delay  : 5s;
-}
-    .top-box .bg3 {
-    background-image : url(top-image/inside-imege.jpg);   /* 背景の画像を指定 */
-    background-size: cover;
-    background-position:center;
-    animation-delay  : 10s;
-}
-    .top-box .bg4 {
-    background-image : url(top-image/branch-image.jpg);   /* 背景の画像を指定 */
-    background-size: cover;
-    background-position:center;
-    animation-delay  : 15s;
-}
-  
-  @keyframes bgAnime {
-     0% { opacity: 0; }
-     5% { opacity: 1; }
-     25% { opacity: 1; }
-     30% { opacity: 0; }
-    100% { opacity: 0; }
-   }
+                <nav class="nav-menu" >
+                    <ul id="top-menu">
+                        <li class="menu-item"><a href="#top">HOME</a></li>
+                        <li class="menu-item"><a href="#concept-area">CONCEPT</a></li>
+                        <li class="menu-item"><a href="menu.html">MENU</a></li>
+                        <li class="menu-item"><a href="#access-area">ACCESS</a></li>
+                        <li class="menu-item"><a href="#">BLOG</a></li>
+                        <li class="menu-item"><a href="#"><span><i class="fa-brands fa-twitter"></i></a></li></span>
+                        <li class="menu-item"><a href="#"><span><i class="fa-brands fa-instagram-square"></i></a></li></span>
+                    
+                    </ul>
+                </nav>
+            </div>
 
-   .top-box h1{
-    position   : absolute;
-    display    : inline-block;
-    padding    : 10px;
-    font-size  :14px;
-    letter-spacing: 3px;
+    </header>
 
-    font-weight: lighter;
-    color:#fff;
-    top        : 50%;                               /* 中央寄せ */
-    left       : 50%;
-    transform  : translate(-50%,-50%);
-    z-index    : 2;
-  }
+    <main>
+        <div class="top-box">
+            <div class="bgimg bg1"></div>
+            <div class="bgimg bg2"></div>
+            <div class="bgimg bg3"></div>
+            <div class="bgimg bg4"></div>
+            <h1>落ち着いた空間で、<br>焙煎挽きたて珈琲、美しいラテアート<br>
+                気分があがるBranch&Sweets Menu<br>洗練されたArtと音楽につつまれ、<bR>充実した時間をお過ごしください。
+            </h1>
+        </div>
 
-.news-area{
-    height:10%;
-    color:#ffffff;
-    background-color: rgba(64, 34, 15, 0.8);
-}
-.news-area p{
-    padding-left: 1%;
-    line-height:50px;
-
-}
-main {
-    height:100%;
-    width:100%;
-    background-color: rgba(144, 129, 96, 0.5);
-}
-.concept-wrap{
-    max-width:1300;
-    margin:auto;
-    text-align:center;
-    padding-top:120px;
-}
+        <div class="news-area">
+            <a hrer="#" class="news"><p>News! 営業時間の変更のお知らせ</p></a>
+        </div>
+      
+        <div id="concept-area">
+            <div class="concept-wrap">
+                <h2><span>Concept</span></h2>
+                <div class="concept-box">
+                    <p>新鮮な豆を丁寧に焙煎し高品質な本格珈琲と快適な空間の創造<br><br>
+                    
+                        おいしい珈琲と気持ちがあがるブランチ・スウィーツ<br>
+                        洗練されたArtと音楽につつまれた快適な空間<br>
+                        ゆったりと落ち着いた時間をお過ごしください<br>
+                        また、店内はWi-fi 電源をご用意しております<br>
+                        効率の上がるWorkタイムをお過ごしくささい</p>
+                </div>
+            
+                <div class="mark-box">
+                   <img class="mark" src="concept/mark-3set.png" alt="マーク（wifi・通話NG・電源）">
+                </div>
+                
+                <div class="space-box">
+                        <img class="space-gallery" src="concept/gallery.png" alt="Galleryマーク">                        
+                        <img class="sapce-phot1" src="concept/concetp2.jpg" alt="Artスペース">
+                
+                        <img class="space-work" src="concept/workspace.png" alt="Workマーク">                        
+                        <img class="sapce-phot2" src="concept/concept3.jpg" alt="Workスペース">
+                </div>
+               
+            </div>
+        </div>
+        <div id="access-area">
+            <div class="access-wrap">
+                <h2><span>Access</span></h2>
+                <div class="googlemap-gray">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4304.30069046007!2d139.70052231584023!3d35.67982798019462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8bbb7d670dee8e2f!2zMzXCsDQwJzQ3LjQiTiAxMznCsDQyJzA5LjgiRQ!5e1!3m2!1sja!2sjp!4v1652428255425!5m2!1sja!2sjp" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                <div clsss="address">
+                    <div class="shop-name">
+                        <p>Sumple Cafe</p>
+                    </div>
+                    <p>〒151-0053<br>東京都渋谷区代々木1丁目XX-XX</p>
+                    <p>お問合せ</p>
+                    <p>sumplecafe@example.com</p>
+                    <p>営業時間<br>9:00 - 21:00(LO/20:30)<br>定休日 月曜日</p>
+                    <div class="sns">
+                        <ul class="sns-menu">
+                            <li><a href="#" class="sns-item"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#" class="sns-item"><i class="fa-brands fa-instagram-square"></i></a></li>
+                        </ul>
+                    </div>
+                    </div>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="main.js"></script>
     
-
-.concept-box{
-    position: relative;
-    top:100px;
-    background-image: url(concept/concept1.jpg) ;
-    background-size :content;
-    background-position:left;
-    margin:auto;
-    width: 640px;
-    height:460px;
-}
-.concept-box p{
-        position   : absolute;
-        font-size  : 16px;
-        font-weight: bold;
-        color      : #1e1604;
-        top        : 22%;                               
-        left       : 50%;
-        right      : -30%;
-        transform  : translate(-40%,10%);
-        line-height: 34px;
-        z-index    : 11;
-      }
-    
-    .mark{
-        padding-top: 200px;
-         width:10%;
-    }
-    .sapce-phot1,.sapce-phot2{
-        padding: 0;
-        margin-bottom:10px;
-        width:350px;
-        height: 350px;
-    }
-    .space-box{
-        padding-top:80px;
-    }
-    .space-gallery,.space-work{
-        padding: 0;
-        margin-bottom:10px;
-        width:240px;
-        height:350px;
-    }
-
-    .access-wrap{
-        max-width:100;
-        padding-top:120px;
-        margin:auto;
-        text-align:center;
-        font-size:12px;
-        color:#40220F;
-    }
-    .googlemap-gray {
-        padding-top:100px;
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        -o-filter: grayscale(100%);
-        filter: grayscale(100%);
-    }
-    .shop-name{
-        padding:40px 0;
-        font-size: 20px;
-        font-family: "Jokerman";
-    }
-
-    .sns-menu{
-        padding-top:20px;
-        padding-bottom:100px;
-        display: flex; 
-        justify-content: center;
-        color: #efefef;
-    }
-    .sns-item{
-        font-size:16px;
-        padding:10px;
-    }
-    .sns-item:hover{
-        color: rgba(100, 91, 70, 0.4);
-    }
-
-
-    footer{
-        height: 80px;
-        width: 100%;
-        background-color:#45330a;
-        color:#fff;
-        line-height:80px;
-        text-align:center;
-    }
-    .footer-list{
-            display: flex; 
-            justify-content: center;
-            color: #853939;
-      }
-    
-
-    /* Menu */
-    .drinkmenu-area{
-        background-color: rgb(25,27,39);  
-    }
-    .drink-wrap {
-        max-width: 1300px;
-        padding-top:100px;
-        padding-bottom: 80px;
-
-    }
-    .drink-text,.branch-text,.sweets-text{
-        position: relative;
-        top:80px;
-        left:100px;     
-        color:#ffffff;
-        font-size: 18px;
-    }
-    .menu-box{
-        position: relative;
-        display: flex;
-        left:25%;
-        flex-wrap: wrap;
-    }
-
-    .menu-img p{
-        color:#ffffff;
-        padding:20px
-    
-    }
-    .menu-1,.menu-2,.menu-3,.menu-4,.menu-5,.menu-6,.menu-7,.menu-8,.menu-9{
-        width :250px;
-        height:250px;
-        margin-right: 30px;
-        flex:auto;      
-    }
-    .coment{
-        color:#ffffff;
-        font-size:12px;
-        padding-bottom: 30px;
-        text-align: center;  
-    }
-    .branch-wrap {
-        max-width: 1300px;
-        width:100%;
-        padding-top:50px;
-        padding-bottom: 80px;
-    }
-    .sweets-wrap{
-        max-width: 1300px;
-        padding-bottom: 80px;
-    }
-
-    @media (max-width:670px){
-
-    .logo{
-        display:inline-block;
-        position:relative;
-        left:10px;
-        z-index:3;
-
-    }
-    .nav-menu{
-        width:100%;
-    }
-    .concept-box{
-        width: 100%;
-        height:260px;
-    
-        }
-    .concept-box p{
-        font-size  : 10px;
-        top        : 18%;                               
-        left       : 50%;
-        right      : -30%;
-        transform  : translate(-40%,10%);
-        line-height: 20px;
-        }
-    
-    .mark{
-        width:40%;
-        }
-    .drink-wrap,.branch-wrap,.sweets-wrap{
-        position: relative;
-        
-        }
-    
-    .menu-box{
-        left:100px;
-        }
-    .menu-img p{
-        font-size:14px;
-        padding:15px
-    }
-    .drink-text,.branch-text,.sweets-text{
-        left:20px;
-        }  
-    .menu-1,.menu-2,.menu-3,.menu-4,.menu-5,.menu-6,.menu-7,.menu-8,.menu-9{
-        width :200px;
-        height:200px;
-        margin:0; 
-        }
-    
-    #top-menu{
-        position:absolute;
-        top:0;
-        width:100%;
-        height:500px;
-        padding-top:60px;
-        margin-left:auto;
-        /* menuを縦に */
-        display:flex;
-        line-height: 30px;
-        flex-direction:column;
-        color:#fff;
-        background-color: rgba(64, 34, 15);
-        transition: .3s;
-        }   
-
-    .menu-item{
-        width:100%;
-        height:100%;
-        /*menuテキストを中央へ */
-        display:flex;
-        justify-content: center;
-        align-items:center;
-        }
-
-
-    #top-menu{
-        /* メニュー非表示 */
-        position:absolute;
-        top:0;
-        right:-100%;
-        width:100%;
-        height:500px;
-        /* menuを縦に */
-        display:flex;
-        line-height: 30px;
-        flex-direction:column;
-        color:#fff;
-        background-color: rgba(64, 34, 15);
-        transition: .3s;
-        }
-        /* ハンバーガーメニュー */
-
-/* 3本線を入れる箱 z-index: 3;（数字が大きいのが上 ）*/
-.menu-btn {
-    position:fixed;
-    top: 30px;
-    left: 300px;
-    width: 30px;
-    height: 24px;
-    z-index: 11;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: all 400ms;
-    }
-
-/* 3本線 */
-.menu-btn span {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    border-radius: 20px;
-    transition: all 400ms;
-    }
-
-/* ハンバーガーメニューの1本・2本・3本のレイアウト */
-    .menu-btn span:nth-child(1) {
-        top: 0;
-    }
-
-    .menu-btn span:nth-child(2) {
-        top: 10px;
-    }
-
-    .menu-btn span:nth-child(3) {
-        top: 20px;
-    }
-
-/* ハンバーガーメニューの1本・2本・3本のレイアウト */
-/* 1本目は-45度の斜線に変化 */
-    .menu-btn.open span:nth-child(1) {
-        background: #fff;
-        top: 6px;
-        transform: rotate(-45deg);
-    }
-/* 2・3本目は45度の斜線に変化 */
-    .menu-btn.open span:nth-child(2),
-    .menu-btn.open span:nth-child(3) {
-        top: 6px;
-        background: #fff;
-        transform: rotate(45deg);
-    }
-
-    #top-menu.open{
-        position: absolute;
-        right:0;
-    } 
-/* ハンバーガーメニューここまで */
-
-}
-    
+</body>
+<footer>
+    <small>&copy;Sumple Cafe All right Reserved 2022</small>
+</footer>
