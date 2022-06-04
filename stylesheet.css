@@ -314,7 +314,11 @@ main {
         max-width: 1300px;
         padding-bottom: 80px;
     }
-
+    @media (max-width:900px){
+    .nav-menu{
+        padding-left:50px;
+    }
+    }
     @media (max-width:670px){
 
     .logo{
