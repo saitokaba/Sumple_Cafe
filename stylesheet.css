@@ -318,6 +318,10 @@ main {
     .nav-menu{
         padding-left:50px;
     }
+    .mark{
+        width: 25%;
+        }
+
     }
     @media (max-width:670px){
 
