@@ -1,170 +1,469 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu-suample Cafe こだわりのおいしいコーヒとFree_wi-fi完備のワークスペース・ギャラリー空間</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="responsive.css">
-    <!--ICON-->
-    <link rel="shortcut icon" href="logo/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="logo/apple-touch-icon-180x180-precomposed.png">
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+::before , ::after {
+	box-sizing: inherit;
+}
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+	vertical-align: middle;
+	text-align: inherit;
+	font: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+}
 
-</head>
+body {
+margin:0;
+font-family: 'メイリオ', 'Meiryo', 'Baskerville',sans-serif;
+list-style: none;
+z-index:0;
+}
 
-<body>
+li {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+h2 span{
+    color:40220F;
+    font-size:30px;
+    border-bottom: solid 4px ;
+}
+header {
+    height: 70px;
+    width: 100%;
+    margin:0 auto;
+    background-color: rgba(64, 34, 15, 0.9);
+    position:fixed;
+    z-index: 10;
+}
 
-    <header>
-            <div class="header-inner">
-                <div class="logo">
-                    <a href="index.html"><img src="logo/icon-72x72.png" alt="SumpleCafeシンボルロゴ"></a>
-                </div>
-                <nav class="nav-menu">
-                    <ul class="top-menu">
-                        <li><a href="index.html" class="menu-item">HOME</a></li>
-                        <li><a href="index.html#concept-area" class="menu-item">CONCEPT</a></li>
-                        <li><a href="#" class="menu-item">MENU</a></li>
-                        <li><a href="index.html#access-area" class="menu-item">ACCESS</a></li>
-                        <li><a href="#" class="menu-item">BLOG</a></li>
-                        <li><a href="#" class="menu-item"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a href="#" class="menu-item"><i class="fa-brands fa-instagram-square"></i></a></li>
-                    </ul>
-                </nav>
-            </div>
-    </header>
+.header-inner{
+    max-width: 1300px;
+    margin:0 auto;
+    width:100%;
+ }
+ 
+.logo{
+   position:fixed;
+   left:5%;
+}
+#top-menu{
+    padding-top:40px;
+    display: flex; 
+    justify-content: center;
+    color: #efefef;
+}
 
-    <main>
-        <div class="drinkmenu-area">
-            <div class="drink-wrap">
-                <div class="drink-text">
-                    <p>Drink<br>Menu</p>
-                </div>
-                <div class="menu-box">
-                    <div class="menu-img">
-                        <img class="menu-1" src="menu-image/1-dripcafe.jpg" alt="1-dripcafe"> 
-                        <p>Drip<br>Regular 430 / Large 480</p>
-                    </div>
-                    <div class="menu-img">
-                        <img class="menu-2" src="menu-image/2-Latte.jpg" alt="2-Latte">
-                        <p>Latte<br>Regular 490 / Large 570</p>
-                    </div>
-                    <div class="menu-img">
-                        <img class="menu-3" src="menu-image/3-espresso.jpg" alt="3-espresso"> 
-                        <p>Mocha<br>Regular 570 / Large 650</p>
-                    </div>
-                    <div class="menu-img">
-                        <img class="menu-4" src="menu-image/4-flatwhite.jpg" alt="4-flatwhite">
-                        <p>Flat White<br>Regular 490 / Large 570</p>
-                    </div>
-                    <div class="menu-img">
-                        <img class="menu-5" src="menu-image/5-hotchoco.jpg" alt="5-hotchoco">
-                        <p>Chocolate<br>Regular 490 / Large 570</p>
-                    </div>
-                    <div class="menu-img">
-                        <img class="menu-6" src="menu-image/6-orange.jpg" alt="6-orange"> 
-                        <p>Orange  Juice<br>Onesize  400</p>
-                    </div>
-                </div>
-            </div>
-                <p class="coment">※掲載のほか、様々なメニューをご用意しております。</p>
-        </div>
+.menu-item a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    padding:0 20px;
+}
+.menu-item:hover{
+    background-color: rgba(244, 229, 191, 0.4);
+    border-radius: 20%;
+}
+.top-box {
+    position   : relative;
+    width      : 100%;
+    height     : 100vh;
+    margin     : auto;
+    overflow   : hidden;
+  }
 
-            <div class="food-area">
-                <div class="branch-wrap">
-                    <div class="branch-text">
-                        <p>branch<br>Menu</p>
-                    </div>
-                    <div class="menu-box">
-                        <div class="menu-img">
-                            <img class="menu-1" src="menu-image/101-burger.jpg" alt="101-burger"> 
-                            <p>Burger/980円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-2" src="menu-image/102-cheese-burger.jpg" alt="102-cheese-burger">
-                            <p>Cheese Burger/1,280円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-3" src="menu-image/103-abogado.jpg" alt="103-abogado"> 
-                            <p>Eggbenedict/1,280円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-4" src="menu-image/104-eggbenedict.jpg" alt="104-eggbenedict">
-                            <p>Avocado Bread/1,180円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-5" src="menu-image/105-pumpkinquiche.jpg" alt="105-pumpkinquiche">
-                            <p>Pumpkinquiche/980円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-6" src="menu-image/106-bread.jpg" alt="106-bread"> 
-                            <p>NutsBread/780円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-7" src="menu-image/107-pancake.jpg" alt="107-pancake"> 
-                            <p>pancake/780円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-8" src="menu-image/108-pancake.jpg" alt="108-pancake"> 
-                            <p>Nuts pancake/980円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-9" src="menu-image/109-pancake.jpg" alt="109-pancake"> 
-                            <p>Fruits pancake/980円</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="sweets-wrap">
-                    <div class="sweets-text">
-                        <p>Sweet<br>Menu</p>
-                    </div>
-                    <div class="menu-box">
-                        <div class="menu-img">
-                            <img class="menu-1" src="menu-image/201-tiramisu.jpg" alt="201-tiramisu"> 
-                            <p>Tiramisu/480円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-2" src="menu-image/202-brownier.jpg" alt="202-brownier">
-                            <p>Brownier/680円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-3" src="menu-image/203-cheesecake.jpg" alt="203-cheesecake"> 
-                            <p>Cheesecake/480円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-4" src="menu-image/204-pannacotta.jpg" alt="204-pannacotta">
-                            <p>Pannacotta/480円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-5" src="menu-image/205-ice.jpg" alt="205-ice">
-                            <p>Pistachio&Lemon ice/680円</p>
-                        </div>
-                        <div class="menu-img">
-                            <img class="menu-6" src="menu-image/206-ice.jpg" alt="206-ice"> 
-                            <p>Vanilla ice/480円</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-               
-        
+  .hamburger {
+    display: none;
+  }
   
-
-
-
-
-        </div>
-        <button type="button" class="menu-btn">
-            <span><img class="burger-menu" src="menu_white24.png" alt="hamburger-menu"></span>
-        </button>
-
-        </main>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-            crossorigin="anonymous"></script>
-            <script src="script.js"></script>
+  /* --- 背景の指定 ------------------------------------------- */
+  .top-box .bgimg {
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    bottom     : 0;
+    right      : 0;
+    opacity    : 0;
+    animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
+  }
     
-</body>
-<footer>
-    <small>&copy;Sumple Cafe All right Reserved 2022</small>
-</footer>
+    .top-box .bg1 {
+    background-image : url(top-image/cafe-image.jpg);   /* 背景の画像を指定 */
+    background-size: cover;
+    background-position:center;
+}
+    .top-box .bg2 {
+    background-image : url(top-image/latte-image.jpg);   /* 背景の画像を指定 */
+    background-size: cover;
+    background-position:center;
+    animation-delay  : 5s;
+}
+    .top-box .bg3 {
+    background-image : url(top-image/inside-imege.jpg);   /* 背景の画像を指定 */
+    background-size: cover;
+    background-position:center;
+    animation-delay  : 10s;
+}
+    .top-box .bg4 {
+    background-image : url(top-image/branch-image.jpg);   /* 背景の画像を指定 */
+    background-size: cover;
+    background-position:center;
+    animation-delay  : 15s;
+}
+  
+  @keyframes bgAnime {
+     0% { opacity: 0; }
+     5% { opacity: 1; }
+     25% { opacity: 1; }
+     30% { opacity: 0; }
+    100% { opacity: 0; }
+   }
+
+   .top-box h1{
+    position   : absolute;
+    display    : inline-block;
+    padding    : 10px;
+    font-size  :14px;
+    letter-spacing: 3px;
+
+    font-weight: lighter;
+    color:#fff;
+    top        : 50%;                               /* 中央寄せ */
+    left       : 50%;
+    transform  : translate(-50%,-50%);
+    z-index    : 2;
+  }
+
+.news-area{
+    height:10%;
+    color:#ffffff;
+    background-color: rgba(64, 34, 15, 0.8);
+}
+.news-area p{
+    padding-left: 1%;
+    line-height:50px;
+
+}
+main {
+    height:100%;
+    width:100%;
+    background-color: rgba(144, 129, 96, 0.5);
+}
+.concept-wrap{
+    max-width:1300;
+    margin:auto;
+    text-align:center;
+    padding-top:120px;
+}
+    
+
+.concept-box{
+    position: relative;
+    top:100px;
+    background-image: url(concept/concept1.jpg) ;
+    background-size :content;
+    background-position:left;
+    margin:auto;
+    width: 640px;
+    height:460px;
+}
+.concept-box p{
+        position   : absolute;
+        font-size  : 16px;
+        font-weight: bold;
+        color      : #1e1604;
+        top        : 22%;                               
+        left       : 50%;
+        right      : -30%;
+        transform  : translate(-40%,10%);
+        line-height: 34px;
+        z-index    : 11;
+      }
+    
+    .mark{
+        padding-top: 200px;
+         width:10%;
+    }
+    .sapce-phot1,.sapce-phot2{
+        padding: 0;
+        margin-bottom:10px;
+        width:350px;
+        height: 350px;
+    }
+    .space-box{
+        padding-top:80px;
+    }
+    .space-gallery,.space-work{
+        padding: 0;
+        margin-bottom:10px;
+        width:240px;
+        height:350px;
+    }
+
+    .access-wrap{
+        max-width:100;
+        padding-top:120px;
+        margin:auto;
+        text-align:center;
+        font-size:12px;
+        color:#40220F;
+    }
+    .googlemap-gray {
+        padding-top:100px;
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    .shop-name{
+        padding:40px 0;
+        font-size: 20px;
+        font-family: "Jokerman";
+    }
+
+    .sns-menu{
+        padding-top:20px;
+        padding-bottom:100px;
+        display: flex; 
+        justify-content: center;
+        color: #efefef;
+    }
+    .sns-item{
+        font-size:16px;
+        padding:10px;
+    }
+    .sns-item:hover{
+        color: rgba(100, 91, 70, 0.4);
+    }
+
+
+    footer{
+        height: 80px;
+        width: 100%;
+        background-color:#45330a;
+        color:#fff;
+        line-height:80px;
+        text-align:center;
+    }
+    .footer-list{
+            display: flex; 
+            justify-content: center;
+            color: #853939;
+      }
+    
+
+    /* Menu */
+    .drinkmenu-area{
+        background-color: rgb(25,27,39);  
+    }
+    .drink-wrap {
+        max-width: 1300px;
+        padding-top:100px;
+        padding-bottom: 80px;
+
+    }
+    .drink-text,.branch-text,.sweets-text{
+        position: relative;
+        top:80px;
+        left:100px;     
+        color:#ffffff;
+        font-size: 18px;
+    }
+    .menu-box{
+        position: relative;
+        display: flex;
+        left:25%;
+        flex-wrap: wrap;
+    }
+
+    .menu-img p{
+        color:#ffffff;
+        padding:20px
+    
+    }
+    .menu-1,.menu-2,.menu-3,.menu-4,.menu-5,.menu-6,.menu-7,.menu-8,.menu-9{
+        width :250px;
+        height:250px;
+        margin-right: 30px;
+        flex:auto;      
+    }
+    .coment{
+        color:#ffffff;
+        font-size:12px;
+        padding-bottom: 30px;
+        text-align: center;  
+    }
+    .branch-wrap {
+        max-width: 1300px;
+        width:100%;
+        padding-top:50px;
+        padding-bottom: 80px;
+    }
+    .sweets-wrap{
+        max-width: 1300px;
+        padding-bottom: 80px;
+    }
+
+    @media (max-width:670px){
+
+    .logo{
+        display:inline-block;
+        position:relative;
+        left:10px;
+        z-index:3;
+
+    }
+    .nav-menu{
+        width:100%;
+    }
+    .concept-box{
+        width: 100%;
+        height:260px;
+    
+        }
+    .concept-box p{
+        font-size  : 10px;
+        top        : 18%;                               
+        left       : 50%;
+        right      : -30%;
+        transform  : translate(-40%,10%);
+        line-height: 20px;
+        }
+    
+    .mark{
+        width:40%;
+        }
+    .drink-wrap,.branch-wrap,.sweets-wrap{
+        position: relative;
+        
+        }
+    
+    .menu-box{
+        left:100px;
+        }
+    .menu-img p{
+        font-size:14px;
+        padding:15px
+    }
+    .drink-text,.branch-text,.sweets-text{
+        left:20px;
+        }  
+    .menu-1,.menu-2,.menu-3,.menu-4,.menu-5,.menu-6,.menu-7,.menu-8,.menu-9{
+        width :200px;
+        height:200px;
+        margin:0; 
+        }
+    
+    #top-menu{
+        position:absolute;
+        top:0;
+        width:100%;
+        height:500px;
+        padding-top:60px;
+        margin-left:auto;
+        /* menuを縦に */
+        display:flex;
+        line-height: 30px;
+        flex-direction:column;
+        color:#fff;
+        background-color: rgba(64, 34, 15);
+        transition: .3s;
+        }   
+
+    .menu-item{
+        width:100%;
+        height:100%;
+        /*menuテキストを中央へ */
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        }
+
+
+    #top-menu{
+        /* メニュー非表示 */
+        position:absolute;
+        top:0;
+        right:-100%;
+        width:100%;
+        height:500px;
+        /* menuを縦に */
+        display:flex;
+        line-height: 30px;
+        flex-direction:column;
+        color:#fff;
+        background-color: rgba(64, 34, 15);
+        transition: .3s;
+        }
+        /* ハンバーガーメニュー */
+
+/* 3本線を入れる箱 z-index: 3;（数字が大きいのが上 ）*/
+.menu-btn {
+    position:fixed;
+    top: 30px;
+    left: 300px;
+    width: 30px;
+    height: 24px;
+    z-index: 11;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 400ms;
+    }
+
+/* 3本線 */
+.menu-btn span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 20px;
+    transition: all 400ms;
+    }
+
+/* ハンバーガーメニューの1本・2本・3本のレイアウト */
+    .menu-btn span:nth-child(1) {
+        top: 0;
+    }
+
+    .menu-btn span:nth-child(2) {
+        top: 10px;
+    }
+
+    .menu-btn span:nth-child(3) {
+        top: 20px;
+    }
+
+/* ハンバーガーメニューの1本・2本・3本のレイアウト */
+/* 1本目は-45度の斜線に変化 */
+    .menu-btn.open span:nth-child(1) {
+        background: #fff;
+        top: 6px;
+        transform: rotate(-45deg);
+    }
+/* 2・3本目は45度の斜線に変化 */
+    .menu-btn.open span:nth-child(2),
+    .menu-btn.open span:nth-child(3) {
+        top: 6px;
+        background: #fff;
+        transform: rotate(45deg);
+    }
+
+    #top-menu.open{
+        position: absolute;
+        right:0;
+    } 
+/* ハンバーガーメニューここまで */
+
+}
+    
