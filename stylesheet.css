@@ -33,7 +33,11 @@ li {
 a{
     text-decoration: none;
 }
-
+h2 span{
+    color:40220F;
+    font-size:30px;
+    border-bottom: solid 4px ;
+}
 header {
     height: 70px;
     width: 100%;
@@ -43,25 +47,24 @@ header {
     z-index: 10;
 }
 
-.header-inner {
+.header-inner{
     max-width: 1300px;
     margin:0 auto;
     width:100%;
-    align-items:center;
  }
  
 .logo{
-   position: fixed;
+   position:fixed;
+   left:5%;
 }
-.top-menu{
-    padding-top:45px;
-    margin-right: 80px;
+#top-menu{
+    padding-top:40px;
     display: flex; 
     justify-content: center;
     color: #efefef;
 }
 
-.menu-item{
+.menu-item a{
     font-size: 16px;
     text-decoration: none;
     color: #ffffff;
@@ -77,6 +80,10 @@ header {
     height     : 100vh;
     margin     : auto;
     overflow   : hidden;
+  }
+
+  .hamburger {
+    display: none;
   }
   
   /* --- 背景の指定 ------------------------------------------- */
@@ -138,12 +145,12 @@ header {
   }
 
 .news-area{
-    height:50px;
+    height:10%;
     color:#ffffff;
     background-color: rgba(64, 34, 15, 0.8);
 }
 .news-area p{
-    padding-left: 30px;
+    padding-left: 1%;
     line-height:50px;
 
 }
@@ -152,15 +159,13 @@ main {
     width:100%;
     background-color: rgba(144, 129, 96, 0.5);
 }
-#concept-area{
-    padding-top:30px;
-}
 .concept-wrap{
-    max-width:1100;
+    max-width:1300;
     margin:auto;
     text-align:center;
-    padding:100px 0 ;
+    padding-top:120px;
 }
+    
 
 .concept-box{
     position: relative;
@@ -187,7 +192,7 @@ main {
     
     .mark{
         padding-top: 200px;
-         width:15%;
+         width:10%;
     }
     .sapce-phot1,.sapce-phot2{
         padding: 0;
@@ -204,28 +209,44 @@ main {
         width:240px;
         height:350px;
     }
-     
+
     .access-wrap{
-        max-width:1100;
+        max-width:100;
+        padding-top:120px;
         margin:auto;
         text-align:center;
-        padding:80px 0;
         font-size:12px;
         color:#40220F;
     }
-    .shop-name{
-        padding:30px 0;
-        font-size: 18px;
-        font-family: "Jokerman";
-    }
     .googlemap-gray {
-        padding-top:80px;
+        padding-top:100px;
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
         -ms-filter: grayscale(100%);
         -o-filter: grayscale(100%);
         filter: grayscale(100%);
     }
+    .shop-name{
+        padding:40px 0;
+        font-size: 20px;
+        font-family: "Jokerman";
+    }
+
+    .sns-menu{
+        padding-top:20px;
+        padding-bottom:100px;
+        display: flex; 
+        justify-content: center;
+        color: #efefef;
+    }
+    .sns-item{
+        font-size:16px;
+        padding:10px;
+    }
+    .sns-item:hover{
+        color: rgba(100, 91, 70, 0.4);
+    }
+
 
     footer{
         height: 80px;
@@ -240,19 +261,7 @@ main {
             justify-content: center;
             color: #853939;
       }
-    .sns-menu{
-        padding:20px;
-        display: flex; 
-        justify-content: center;
-        color: #efefef;
-    }
-    .sns-item{
-        font-size:16px;
-        padding:10px;
-    }
-    .sns-item:hover{
-        color: rgba(100, 91, 70, 0.4);
-    }
+    
 
     /* Menu */
     .drinkmenu-area{
@@ -305,3 +314,156 @@ main {
         max-width: 1300px;
         padding-bottom: 80px;
     }
+
+    @media (max-width:670px){
+
+    .logo{
+        display:inline-block;
+        position:relative;
+        left:10px;
+        z-index:3;
+
+    }
+    .nav-menu{
+        width:100%;
+    }
+    .concept-box{
+        width: 100%;
+        height:260px;
+    
+        }
+    .concept-box p{
+        font-size  : 10px;
+        top        : 18%;                               
+        left       : 50%;
+        right      : -30%;
+        transform  : translate(-40%,10%);
+        line-height: 20px;
+        }
+    
+    .mark{
+        width:40%;
+        }
+    .drink-wrap,.branch-wrap,.sweets-wrap{
+        position: relative;
+        
+        }
+    
+    .menu-box{
+        left:100px;
+        }
+    .menu-img p{
+        font-size:14px;
+        padding:15px
+    }
+    .drink-text,.branch-text,.sweets-text{
+        left:20px;
+        }  
+    .menu-1,.menu-2,.menu-3,.menu-4,.menu-5,.menu-6,.menu-7,.menu-8,.menu-9{
+        width :200px;
+        height:200px;
+        margin:0; 
+        }
+    
+    #top-menu{
+        position:absolute;
+        top:0;
+        width:100%;
+        height:500px;
+        padding-top:60px;
+        margin-left:auto;
+        /* menuを縦に */
+        display:flex;
+        line-height: 30px;
+        flex-direction:column;
+        color:#fff;
+        background-color: rgba(64, 34, 15);
+        transition: .3s;
+        }   
+
+    .menu-item{
+        width:100%;
+        height:100%;
+        /*menuテキストを中央へ */
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        }
+
+
+    #top-menu{
+        /* メニュー非表示 */
+        position:absolute;
+        top:0;
+        right:-100%;
+        width:100%;
+        height:500px;
+        /* menuを縦に */
+        display:flex;
+        line-height: 30px;
+        flex-direction:column;
+        color:#fff;
+        background-color: rgba(64, 34, 15);
+        transition: .3s;
+        }
+        /* ハンバーガーメニュー */
+
+/* 3本線を入れる箱 z-index: 3;（数字が大きいのが上 ）*/
+.menu-btn {
+    position:fixed;
+    top: 30px;
+    left: 300px;
+    width: 30px;
+    height: 24px;
+    z-index: 11;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 400ms;
+    }
+
+/* 3本線 */
+.menu-btn span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 20px;
+    transition: all 400ms;
+    }
+
+/* ハンバーガーメニューの1本・2本・3本のレイアウト */
+    .menu-btn span:nth-child(1) {
+        top: 0;
+    }
+
+    .menu-btn span:nth-child(2) {
+        top: 10px;
+    }
+
+    .menu-btn span:nth-child(3) {
+        top: 20px;
+    }
+
+/* ハンバーガーメニューの1本・2本・3本のレイアウト */
+/* 1本目は-45度の斜線に変化 */
+    .menu-btn.open span:nth-child(1) {
+        background: #fff;
+        top: 6px;
+        transform: rotate(-45deg);
+    }
+/* 2・3本目は45度の斜線に変化 */
+    .menu-btn.open span:nth-child(2),
+    .menu-btn.open span:nth-child(3) {
+        top: 6px;
+        background: #fff;
+        transform: rotate(45deg);
+    }
+
+    #top-menu.open{
+        position: absolute;
+        right:0;
+    } 
+/* ハンバーガーメニューここまで */
+
+}
+    
