@@ -7,33 +7,64 @@
     <title>Sample Cafe こだわりのおいしいコーヒとFree_wi-fi完備のワークスペース・ギャラリー空間</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="responsive.css">
     <!--ICON-->
     <link rel="shortcut icon" href="logo/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="logo/apple-touch-icon-180x180-precomposed.png">
+    <!-- jqueryの呼び出し -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- メニューの部分にjqueryを使用 -->
+    <script>
+        $(function () {
+            // .menu-btnのクラス属性を持っている要素をクリックしたとき
+            $('.menu-btn').on("click", function () {
+                // クリックした要素に対してクラス属性にopenが付いていなければ追加し、付いていた場合は削除する
+                $(this).toggleClass('open');
+                // // ID属性にgnavを持っている要素のクラス属性にopenが付いていなければ追加し、付いていた場合は削除する
+                $('#top-menu').toggleClass('open');
+
+            });
+
+        });
+        // メニューをクリックされたら、非表示にする
+        $(function () {
+            $('#top-menu >li>a').on("click", function () {
+                $('.menu-btn').toggleClass('open');
+                $('#top-menu').toggleClass('open');
+            });
+        });
+    </script>
+    <!-- ここまでjquery -->
 
 </head>
 
 <body id="top">
-
     <header>
             <div class="header-inner">
                 <div class="logo">
                     <a href="#"><img src="logo/icon-72x72.png" alt="SumpleCafeシンボルロゴ"></a>
                 </div>
-                <nav class="nav-menu">
-                    <ul class="top-menu">
-                        <li><a href="#top" class="menu-item">HOME</a></li>
-                        <li><a href="#concept-area" class="menu-item">CONCEPT</a></li>
-                        <li><a href="menu.html" class="menu-item">MENU</a></li>
-                        <li><a href="#access-area" class="menu-item">ACCESS</a></li>
-                        <li><a href="#" class="menu-item">BLOG</a></li>
-                        <li><a href="#" class="menu-item"><span><i class="fa-brands fa-twitter"></i></a></li></span>
-                        <li><a href="#" class="menu-item"><span><i class="fa-brands fa-instagram-square"></i></a></li></span>
+
+                <div class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+    
+                <nav class="nav-menu" >
+                    <ul id="top-menu">
+                        <li class="menu-item"><a href="#top">HOME</a></li>
+                        <li class="menu-item"><a href="#concept-area">CONCEPT</a></li>
+                        <li class="menu-item"><a href="menu.html">MENU</a></li>
+                        <li class="menu-item"><a href="#access-area">ACCESS</a></li>
+                        <li class="menu-item"><a href="#">BLOG</a></li>
+                        <li class="menu-item"><a href="#"><span><i class="fa-brands fa-twitter"></i></a></li></span>
+                        <li class="menu-item"><a href="#"><span><i class="fa-brands fa-instagram-square"></i></a></li></span>
                     
                     </ul>
                 </nav>
             </div>
+
     </header>
 
     <main>
@@ -48,7 +79,7 @@
         </div>
 
         <div class="news-area">
-            <a hrer="#" class="news"><p>News!　営業時間の変更のお知らせ</p></a>
+            <a hrer="#" class="news"><p>News! 営業時間の変更のお知らせ</p></a>
         </div>
       
         <div id="concept-area">
@@ -100,15 +131,8 @@
                     </div>
                     </div>
             </div>
-        
-    <button type="button" class="menu-btn">
-        <span><img class="burger-menu" src="menu_white24.png" alt="hamburger-menu"></span>
-    </button>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous"></script>
-        <script src="script.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="main.js"></script>
     
 </body>
 <footer>
